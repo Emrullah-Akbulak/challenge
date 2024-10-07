@@ -1,0 +1,20 @@
+services:
+  server:
+    build: 
+      context: ./server
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./server/src/:/app/src/
+    environment:  
+      - ENVIRONMENT=dev
+  web:
+    build: 
+      context: ./web
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./web/src:/app/src
+    environment:
+      - WATCHPACK_POLLING=true
+      - ENVIRONMENT=dev

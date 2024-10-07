@@ -1,0 +1,32 @@
+.wrapper {
+    display:  inline-flex;
+    cursor: pointer;
+    user-select: none;
+}
+
+.wrapper:hover *{
+    color: var(--primary-color);
+}
+
+.anchor{
+    margin: 0.25rem 0.5rem;
+}
+
+.wrapper:not(:last-child) .anchor::after{
+    content: "·";
+    position: relative;
+    right: -0.5rem;
+}
+
+.span {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    text-decoration: none from-font;
+    transition: color 0.1s ease-in-out;
+    font-family: var(--default-font);
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 600;
+    color: var(--tertiary-color);
+}    

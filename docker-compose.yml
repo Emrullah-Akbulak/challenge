@@ -1,0 +1,22 @@
+services:
+  server:
+    build: ./server
+    env_file:
+      - ./server/.env
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: "curl --fail http://localhost:8000/ || exit 1"
+      interval: 20s
+      retries: 5
+      timeout: 10s
+  web:
+    build: 
+      context: ./web
+    links:
+      - "server:api"
+    env_file:
+      - ./web/.env
+volumes:
+  postgres:
+    driver: local

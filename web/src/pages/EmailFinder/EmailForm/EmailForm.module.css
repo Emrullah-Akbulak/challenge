@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 20px;
+  height: min-content;
+}
+
+.infoTextField {
+    flex: 1 1 calc(25% - 20px);
+}
+
+.generateButton {
+    display: flex;
+    height: 56px;
+    border-radius: var(--default-border-radius);
+    padding: 14px;
+}
+
+@media screen and (max-width: 930px) {
+    .generateButton{
+        flex: 1 0 calc(25% - 20px);
+        min-width: 150px;
+    }
+}

@@ -1,0 +1,44 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 350px;
+  max-height: 350px;
+}
+
+.current {
+  display: flex;
+  min-height: 56px;
+  margin-bottom: 15px;
+}
+
+
+.emailHistory {
+  border-radius:var(--default-border-radius);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondary-color);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.emailHistory::-webkit-scrollbar {
+    scrollbar-color: var(--primary-color) transparent;
+}
+
+.emailHistory {
+    scrollbar-color: var(--primary-color) transparent;
+}
+
+.emailHistory > span{
+    margin: auto;
+    font-weight: 600;
+    font-family: var(--secondary-font);
+    user-select: none;
+}
+
+.emailHistory > div:nth-child(2n){
+    filter: brightness(0.95);
+}
+

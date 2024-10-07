@@ -1,0 +1,60 @@
+.mainContentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  margin: 5rem 2rem;
+}
+
+.infoTextWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.infoTextWrapper > span {
+  font-family: var(--default-font);
+  font-size: 3rem;
+  text-align: center;
+  line-height: 3.5rem;
+}
+
+.infoCardWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoCardWrapper > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.errorCard{
+  background-color: var(--error-color);
+  color: var(--secondary-color);
+  width: 100%;
+  display: flex;
+  padding: 8px 20px;
+  border-radius: var(--default-border-radius);
+  margin-bottom: 10px;
+}
+
+.infoFormWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-bottom: 30px;
+}
+
+.infoHistoryWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}

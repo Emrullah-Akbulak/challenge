@@ -1,0 +1,17 @@
+.wrapper {
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: var(--secondary-color);
+    
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0px auto;
+    padding: 16px 32px;
+}

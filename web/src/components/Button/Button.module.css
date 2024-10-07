@@ -1,0 +1,25 @@
+.wrapper {
+    min-width: 180px;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--tertiary-color);
+    border-radius: var(--round-border-radius);
+    height: 36px;
+    transition: 100ms ease-out;
+    padding: 8px 16px;
+    cursor: pointer;
+    color: var(--tertiary-color);
+}
+
+.wrapper:hover{
+    background-color: rgb(239, 238, 235);
+    color: var(--tertiary-color);
+    border: 1px solid var(--tertiary-color);
+}
+
+.span {
+    font-family: var(--secondary-font);
+    font-weight: 600;
+    color: currentcolor;
+    font-size: 1rem;
+    line-height: 1.25rem;
+}    

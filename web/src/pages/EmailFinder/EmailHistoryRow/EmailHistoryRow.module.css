@@ -1,0 +1,46 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    padding: 8px 16px;
+    max-height: 56px;
+    width: 100%;
+    font-family: var(--secondary-font);
+}
+
+.clipboardButton{
+    width: 36px;
+}
+
+.default .clipboardButton{
+    padding: 5px;
+}
+
+.default .clipboardButton:not(.copied){
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+}
+
+.default:hover .clipboardButton:not(.copied){
+    opacity: 1;
+    user-select: all;
+    pointer-events: all;
+}
+
+.selected {
+    background-color: var(--primary-color);
+    color: var(--secondary-text-color);
+    font-weight: 600;
+    border-radius: var(--default-border-radius);
+    font-size: 1rem;
+    line-height: 1.25rem;
+}
+
+.selected .clipboardButton{
+    background-color: var(--primary-color);
+    color: var(--secondary-text-color);
+    width: 30px;
+}
+  
