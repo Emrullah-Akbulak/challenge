@@ -13,7 +13,7 @@ Note: Switching between different environments requires rebuilding.
 Production environment can be run with:
 
 ```
-docker-compose -f docker-compose.yml -f docker-compose.prod.yml up
+docker-compose -f docker-compose.yml -f docker-compose.prod.yml up --build
 ```
 
 This environment uses `Nginx` to serve `React` with production optimizations.
@@ -25,7 +25,7 @@ The client (aka `React App`) can be directly accessed from http://localhost and 
 Development environment can be run with:
 
 ```
-docker-compose -f docker-compose.yml -f docker-compose.dev.yml up
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build
 ```
 
 This environment does not use any reverse proxy and serves `ExpressJS` and `React` servers under ports `8000` and `3000` respectively. However, this environment offers quick refresh for developers to be able to mirror their changes to docker containers while coding.
@@ -38,7 +38,7 @@ React server is served under http://localhost:3000
 Test environment can be run with:
 
 ```
-docker-compose -f docker-compose.test.yml up
+docker-compose -f docker-compose.test.yml up --build
 ```
 
 This environment runs all the tests in ExpressJS server using Jest and returns the output
