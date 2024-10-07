@@ -9,12 +9,16 @@ router.post(
   "/generate",
   requestValidator(EmailGenerationSchema),
   async (req: Request, res: Response) => {
-    const { firstName, lastName, domain } = req.body;
-
-    const generatedEmail = await new EmailGeneratorManager().generate({
+    const {
       firstName,
       lastName,
       domain,
+    }: { firstName: string; lastName: string; domain: string } = req.body;
+
+    const generatedEmail = await new EmailGeneratorManager().generate({
+      firstName: firstName.toLowerCase(),
+      lastName: lastName.toLowerCase(),
+      domain: domain.toLowerCase(),
     });
 
     res.send(generatedEmail);
