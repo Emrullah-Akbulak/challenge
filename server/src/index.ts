@@ -13,11 +13,6 @@ import { setRoutes } from "./startup/routes";
 const app: express.Application = express();
 const port = process.env.PORT;
 
-//Quick check for environment
-if (!port) {
-  throw new Error("PORT is not defined, check environment variables.");
-}
-
 //Allow all origins for this small project, normally you would restrict it to your own origins
 app.use(cors());
 
@@ -31,6 +26,11 @@ setRoutes(app);
 app.use(error);
 
 if (process.env.NODE_ENV !== "test") {
+  //Quick check for environment
+  if (!port) {
+    throw new Error("PORT is not defined, check environment variables.");
+  }
+
   app.listen(port, () => console.log(`Listening on port ${port}`));
 }
 
